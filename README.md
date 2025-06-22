@@ -32,6 +32,65 @@ A **secure authentication system** built using the **MERN stack**, enabling user
 
 1️⃣ Clone the repository:
 
-```bash
+bash
 git clone https://github.com/your-username/mern-auth-system.git
 cd mern-auth-system
+2️⃣ Install server dependencies:
+
+bash
+Copy
+Edit
+cd server
+npm install
+3️⃣ Install client dependencies:
+
+bash
+Copy
+Edit
+cd ../client
+npm install
+4️⃣ Create environment variables:
+
+In server/.env:
+
+ini
+Copy
+Edit
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+SMTP_USER=your_email@example.com
+SMTP_PASS=your_email_password
+5️⃣ Run the app:
+
+bash
+Copy
+Edit
+# Start backend
+cd server
+npm start
+
+# Start frontend (in a separate terminal)
+cd ../client
+npm start
+Visit:
+
+arduino
+Copy
+Edit
+http://localhost:3000
+📂 Project Structure
+perl
+Copy
+Edit
+mern-auth-system/
+├── client/         # React frontend
+├── server/         # Node + Express backend
+├── README.md
+📌 Future Enhancements
+OAuth (Google / GitHub login)
+
+2FA (Two-Factor Authentication)
+
+Admin panel
+
+Rate limiting / captcha for added security
