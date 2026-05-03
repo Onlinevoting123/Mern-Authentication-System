@@ -4,14 +4,16 @@ import "dotenv/config";
 import cookieParser from "cookie-parser";
 import connectDB from "./config/mongodb.js";
 import authRouter from "./Routes/authRouter.js";
+import userRouter from "./Routes/userRouter.js";
 
 const app=express();
 const port=process.env.PORT || 4000
 connectDB();
+const allowedOrigins = ['https://mern-authentication-system-nine.vercel.app/']
 
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors({credentials:true}));
+app.use(cors({origin: allowedOrigins, credentials: true}));
 
 app.get('/',(req,res)=>res.send("api working"));
 
